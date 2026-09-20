@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Brian Livramento é Full Stack Developer freelancer especializado em desenvolvimento web e mobile, APIs, PHP, Drupal, JavaScript e bancos de dados.">
+  <meta name="author" content="Brian Livramento">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Brian Livramento — Full Stack Developer Freelancer">
+  <meta property="og:description"
+    content="Desenvolvimento web e mobile, APIs e soluções Full Stack para projetos freelance.">
+  <meta property="og:image" content="img/bl.png">
+
+  <title>
+    Brian Livramento — Full Stack Developer Freelancer
+  </title>
+
+  <style>
+    .tech-groups {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .tech-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 4px;
+    }
+  </style>
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+
+      const systemTheme = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.dataset.theme =
+        savedTheme || systemTheme;
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand__mark">BL</span>
+        <span>Brian Livramento</span>
+      </a>
+
+      <div class="topbar__actions">
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro"
+          title="Alternar tema">
+          <i class="bi bi-moon-stars theme-toggle__moon" aria-hidden="true"></i>
+
+          <i class="bi bi-sun theme-toggle__sun" aria-hidden="true"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="layout" id="inicio">
+
+    <div class="content">
+
+      <section class="intro" aria-labelledby="titulo-principal">
+        <p class="eyebrow">
+          Desenvolvimento web e mobile • Freelancer
+        </p>
+        <h1 id="titulo-principal">Full Stack Developer</h1>
+      </section>
+
+      <section class="section" aria-labelledby="titulo-stack">
+        <h2 id="titulo-stack">Stacks (Tecnologias)</h2>
+
+        <div class="tech-groups" aria-label="Tecnologias e ferramentas">
+
+          <div class="tech-group" aria-label="Back-end e CMS">
+
+            <span class="tech tech-php">
+              <i class="devicon-php-plain"></i>
+              <span>PHP</span>
+            </span>
+
+            <span class="tech tech-drupal">
+              <i class="devicon-drupal-plain"></i>
+              <span>Drupal</span>
+            </span>
+
+            <span class="tech tech-symfony">
+              <i class="devicon-symfony-original"></i>
+              <span>Symfony</span>
+            </span>
+
+            <span class="tech tech-laravel">
+              <i class="devicon-laravel-original"></i>
+              <span>Laravel</span>
+            </span>
+
+            <span class="tech tech-cakephp">
+              <i class="devicon-cakephp-plain"></i>
+              <span>CakePHP</span>
+            </span>
+
+            <span class="tech tech-wordpress">
+              <i class="devicon-wordpress-plain"></i>
+              <span>WordPress</span>
+            </span>
+          </div>
+
+          <div class="tech-group" aria-label="Front-end">
+
+            <span class="tech tech-javascript">
+              <i class="devicon-javascript-plain"></i>
+              <span>JavaScript</span>
+            </span>
+
+            <span class="tech tech-typescript">
+              <i class="devicon-typescript-plain"></i>
+              <span>TypeScript</span>
+            </span>
+
+            <span class="tech tech-vue">
+              <i class="devicon-vuejs-plain"></i>
+              <span>Vue.js</span>
+            </span>
+
+            <span class="tech tech-node">
+              <i class="devicon-nodejs-plain"></i>
+              <span>Node.js</span>
+            </span>
+
+            <span class="tech tech-bootstrap">
+              <i class="devicon-bootstrap-plain"></i>
+              <span>Bootstrap</span>
+            </span>
+
+            <span class="tech tech-sass">
+              <i class="devicon-sass-original"></i>
+              <span>Sass</span>
+            </span>
+
+          </div>
+
+          <div class="tech-group" aria-label="Bancos de dados">
+
+            <span class="tech tech-mysql">
+              <i class="devicon-mysql-original"></i>
+              <span>MySQL</span>
+            </span>
+
+            <span class="tech tech-postgresql">
+              <i class="devicon-postgresql-plain"></i>
+              <span>PostgreSQL</span>
+            </span>
+
+            <span class="tech tech-mariadb">
+              <i class="devicon-mariadb-original"></i>
+              <span>MariaDB</span>
+            </span>
+
+            <span class="tech tech-mongodb">
+              <i class="devicon-mongodb-plain"></i>
+              <span>MongoDB</span>
+            </span>
+
+            <span class="tech tech-redis">
+              <i class="devicon-redis-plain"></i>
+              <span>Redis</span>
+            </span>
+
+            <span class="tech tech-sqlite">
+              <i class="devicon-sqlite-plain"></i>
+              <span>SQLite</span>
+            </span>
+
+          </div>
+
+          <div class="tech-group" aria-label="DevOps e infraestrutura">
+
+            <span class="tech tech-kubernetes">
+              <i class="devicon-kubernetes-plain"></i>
+              <span>Kubernetes</span>
+            </span>
+
+            <span class="tech tech-docker">
+              <i class="devicon-docker-plain"></i>
+              <span>Docker</span>
+            </span>
+
+            <span class="tech tech-jenkins">
+              <i class="devicon-jenkins-line"></i>
+              <span>Jenkins</span>
+            </span>
+
+          </div>
+
+          <div class="tech-group" aria-label="Cloud">
+
+            <span class="tech tech-aws">
+              <i class="devicon-amazonwebservices-plain-wordmark"></i>
+              <span>AWS</span>
+            </span>
+
+            <span class="tech tech-azure">
+              <i class="devicon-azure-plain"></i>
+              <span>Azure</span>
+            </span>
+
+            <span class="tech tech-googlecloud">
+              <i class="devicon-googlecloud-plain"></i>
+              <span>Google Cloud</span>
+            </span>
+
+          </div>
+
+          <div class="tech-group" aria-label="Servidores e sistemas">
+
+            <span class="tech tech-linux">
+              <i class="devicon-linux-plain"></i>
+              <span>Linux</span>
+            </span>
+
+            <span class="tech tech-apache">
+              <i class="devicon-apache-plain"></i>
+              <span>Apache</span>
+            </span>
+
+            <span class="tech tech-nginx">
+              <i class="devicon-nginx-original"></i>
+              <span>Nginx</span>
+            </span>
+
+          </div>
+
+          <div class="tech-group" aria-label="Ferramentas de desenvolvimento">
+
+            <span class="tech tech-git">
+              <i class="devicon-git-plain"></i>
+              <span>Git</span>
+            </span>
+
+
+
+            <span class="tech tech-composer">
+              <i class="devicon-composer-line"></i>
+              <span>Composer</span>
+            </span>
+
+            <span class="tech tech-npm">
+              <i class="devicon-npm-original-wordmark"></i>
+              <span>NPM</span>
+            </span>
+
+            <span class="tech tech-vscode">
+              <i class="devicon-vscode-plain"></i>
+              <span>VS Code</span>
+            </span>
+
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <aside class="profile" aria-label="Perfil profissional">
+
+      <div class="avatar">
+        <img src="img/bl.png" alt="Foto de Brian Livramento">
+      </div>
+
+      <h2>Brian Livramento</h2>
+      <p class="username">Full Stack Developer</p>
+
+      <div class="contact-links">
+        <a href="https://wa.me/5511937525029" target="_blank" rel="noopener noreferrer"
+          aria-label="Conversar pelo WhatsApp" title="WhatsApp">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        </a>
+
+        <a href="mailto:brian.livramento@hotmail.com" aria-label="Enviar e-mail" title="E-mail">
+          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/brianlivramento/" target="_blank" rel="noopener noreferrer"
+          aria-label="Abrir LinkedIn" title="LinkedIn">
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://github.com/brlivramento" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub"
+          title="GitHub">
+          <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+      </div>
+      <br>
+      <a class="resume-link" href="docs/cv_brianlivramento.pdf" download>
+        <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
+        <span>Meu currículo</span>
+      </a>
+
+    </aside>
+  </main>
+  <footer>© 2026 Brian Livramento</footer>
+  <script>
+    const themeToggle = document.getElementById("theme-toggle");
+    function updateThemeButton(theme) {
+      const nextTheme =
+        theme === "dark" ? "claro" : "escuro";
+      themeToggle.setAttribute(
+        "aria-label",
+        `Ativar modo ${nextTheme}`
+      );
+    }
+    updateThemeButton(
+      document.documentElement.dataset.theme
+    );
+    themeToggle.addEventListener("click", function () {
+      const currentTheme =
+        document.documentElement.dataset.theme;
+      const newTheme =
+        currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.dataset.theme = newTheme;
+      localStorage.setItem("theme", newTheme);
+      updateThemeButton(newTheme);
+    });
+  </script>
+</body>
+</html>
