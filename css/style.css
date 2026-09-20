@@ -455,3 +455,16 @@ footer {
     transition: none !important;
   }
 }
+
+.tech-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.tech-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
