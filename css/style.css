@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --page: #fff;
-  --surface: #fff;
+  --page: #ffffff;
+  --surface: #ffffff;
   --soft: #f6f8fa;
   --ink: #1f2328;
   --muted: #636c76;
@@ -188,7 +188,7 @@ h1 {
 }
 
 .section h2 {
-  margin: 0 0 24px;
+  margin: 0 0 26px;
   font-size: 18px;
   letter-spacing: -0.02em;
 }
@@ -197,14 +197,25 @@ h1 {
 .tech-groups {
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 30px;
 }
 
 .tech-group {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 4px;
+  gap: 5px;
+}
+
+/* Exibe o texto que já existe no aria-label do HTML. */
+.tech-group::before {
+  width: 100%;
+  margin-bottom: 7px;
+  color: var(--ink);
+  content: attr(aria-label);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
 }
 
 .tech {
@@ -215,10 +226,11 @@ h1 {
   gap: 8px;
   padding: 8px 14px;
   border: 0;
-  color: #fff;
+  color: #ffffff;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.08em;
+  line-height: 1;
   text-transform: uppercase;
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.12);
   transition: transform 0.18s ease, filter 0.18s ease;
@@ -241,34 +253,91 @@ h1 {
   line-height: 1;
 }
 
-/* Cores das tecnologias utilizadas */
+/* Back-end e CMS */
 .tech-php { background: #777bb4; }
-.tech-drupal { background: #0678be; }
-.tech-symfony { background: #202020; }
-.tech-laravel { background: #ff2d20; }
-.tech-cakephp { background: #d33c43; }
-.tech-wordpress { background: #21759b; }
-.tech-javascript { background: #f7df1e; color: #171717; }
-.tech-typescript { background: #3178c6; }
-.tech-vue { background: #42b883; }
 .tech-node { background: #339933; }
+.tech-laravel { background: #ff2d20; }
+.tech-nestjs { background: #e0234e; }
+.tech-symfony { background: #202020; }
+.tech-zend { background: #68b604; }
+.tech-cakephp { background: #d33c43; }
+.tech-drupal { background: #0678be; }
+.tech-moodle { background: #f98012; }
+.tech-joomla { background: #5091cd; }
+.tech-wordpress { background: #21759b; }
+
+/* Front-end */
+.tech-javascript {
+  background: #f7df1e;
+  color: #171717;
+}
+
+.tech-typescript { background: #3178c6; }
+
+.tech-react {
+  background: #20232a;
+  color: #61dafb;
+}
+
+.tech-vue { background: #42b883; }
+.tech-angular { background: #dd0031; }
 .tech-bootstrap { background: #7952b3; }
 .tech-sass { background: #cc6699; }
+
+/* Bancos de dados e cache */
 .tech-mysql { background: #00758f; }
 .tech-postgresql { background: #336791; }
 .tech-mariadb { background: #003545; }
 .tech-mongodb { background: #47a248; }
 .tech-redis { background: #dc382d; }
 .tech-sqlite { background: #003b57; }
-.tech-kubernetes { background: #326ce5; }
+
+/* ORM e acesso a dados */
+.tech-doctrine { background: #fc6a31; }
+.tech-prisma { background: #2d3748; }
+.tech-sonata { background: #1f6fb2; }
+
+/* Mensageria e testes */
+.tech-kafka { background: #231f20; }
+.tech-phpunit { background: #6c5c93; }
+.tech-jest { background: #c21325; }
+
+/* DevOps e infraestrutura */
 .tech-docker { background: #2496ed; }
+.tech-kubernetes { background: #326ce5; }
 .tech-jenkins { background: #d33833; }
-.tech-aws { background: #232f3e; color: #ff9900; }
+.tech-cicd { background: #0f766e; }
+
+/* Cloud */
+.tech-aws {
+  background: #232f3e;
+  color: #ff9900;
+}
+
 .tech-azure { background: #0078d4; }
 .tech-googlecloud { background: #4285f4; }
-.tech-linux { background: #fbc02d; color: #171717; }
+
+/* Servidores e sistemas */
+.tech-linux {
+  background: #fbc02d;
+  color: #171717;
+}
+
 .tech-apache { background: #d22128; }
 .tech-nginx { background: #009639; }
+
+/* APIs, arquitetura e práticas */
+.tech-rest { background: #0f766e; }
+.tech-restful { background: #0369a1; }
+
+.tech-swagger {
+  background: #85ea2d;
+  color: #173300;
+}
+
+.tech-solid { background: #7c3aed; }
+
+/* Ferramentas de desenvolvimento */
 .tech-git { background: #f05032; }
 .tech-composer { background: #6c5c4f; }
 .tech-npm { background: #cb3837; }
@@ -284,6 +353,7 @@ h1 {
   --avatar-zoom: 1.08;
   --avatar-x: 50%;
   --avatar-y: 38%;
+
   width: 70%;
   aspect-ratio: 1;
   overflow: hidden;
@@ -413,15 +483,21 @@ footer {
   }
 
   .tech-groups {
-    gap: 22px;
+    gap: 24px;
   }
 
   .tech-group {
-    gap: 3px;
+    gap: 4px;
+  }
+
+  .tech-group::before {
+    margin-bottom: 5px;
+    font-size: 13px;
   }
 
   .tech {
     min-height: 32px;
+    gap: 6px;
     padding: 7px 10px;
     font-size: 9px;
   }
@@ -454,17 +530,4 @@ footer {
   *::after {
     transition: none !important;
   }
-}
-
-.tech-groups {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-}
-
-.tech-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
 }
