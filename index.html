@@ -71,12 +71,28 @@
 
         <div class="tabs" role="tablist">
           <button class="tab active" type="button" data-tab="stacks">Stacks</button>
+          <button class="tab" type="button" data-tab="portfolio">Portfólio</button>
         </div>
 
         <div class="tab-content active" id="stacks">
           <div class="tech-groups" id="tech-groups" aria-label="Tecnologias e ferramentas"></div>
         </div>
 
+        <div class="tab-content" id="portfolio">
+          <div class="portfolio-intro">
+            <p class="portfolio-intro__title">
+              Abaixo, apresento uma síntese da minha trajetória nos segmentos em que atuei.
+            </p>
+            <p class="portfolio-intro__details">
+              Para detalhes sobre clientes e projetos, consulte meu
+              <a href="https://www.linkedin.com/in/brianlivramento/"
+                target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>.<br>
+              Sobre arquiteturas, desafios e soluções técnicas, entre em contato.
+            </p>
+          </div>
+          <div class="portfolio-timeline" id="portfolio-timeline"></div>
+        </div>
       </section>
     </div>
 
@@ -122,6 +138,7 @@
   </main>
   <footer>© 2026 Brian Livramento</footer>
   <script src="js/stacks.js"></script>
+  <script src="js/portfolio.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
