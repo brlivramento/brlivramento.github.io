@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Brian Livramento é Full Stack Developer freelancer especializado em desenvolvimento web e mobile, APIs, PHP, Drupal, JavaScript e bancos de dados.">
+  <meta name="author" content="Brian Livramento">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Brian Livramento — Full Stack Developer Freelancer">
+  <meta property="og:description"
+    content="Desenvolvimento web e mobile, APIs e soluções Full Stack para projetos freelance.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/55096318">
+
+  <title>Brian Livramento — Full Stack Developer Freelancer</title>
+
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem("theme");
+
+      const systemTheme = window.matchMedia(
+        "(prefers-color-scheme: light)"
+      ).matches
+        ? "dark"
+        : "light";
+
+      document.documentElement.dataset.theme =
+        savedTheme || systemTheme;
+    })();
+  </script>
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+
+      <a class="brand" href="#inicio" aria-label="Voltar ao início">
+        <span class="brand__mark">BL</span>
+        <span>Brian Livramento</span>
+      </a>
+
+      <div class="topbar__actions">
+
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro" title="Alternar tema">
+          <i class="bi bi-moon-stars theme-toggle__moon" aria-hidden="true"></i>
+          <i class="bi bi-sun theme-toggle__sun" aria-hidden="true"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <main class="layout" id="inicio">
+
+    <div class="content">
+
+      <section class="intro" aria-labelledby="titulo-principal">
+        <p class="eyebrow">Desenvolvimento web e mobile • Freelancer</p>
+        <h1 id="titulo-principal">Full Stack Developer</h1>
+      </section>
+
+      <section class="section">
+
+        <div class="tabs" role="tablist">
+          <button class="tab active" type="button" data-tab="stacks">Stacks</button>
+        </div>
+
+        <div class="tab-content active" id="stacks">
+          <div class="tech-groups" id="tech-groups" aria-label="Tecnologias e ferramentas"></div>
+        </div>
+
+      </section>
+    </div>
+
+    <aside class="profile" aria-label="Perfil profissional">
+
+      <div class="avatar">
+        <img src="https://avatars.githubusercontent.com/u/55096318" alt="Foto de Brian Livramento">
+      </div>
+
+      <h2>Brian Livramento</h2>
+      <p class="username">Full Stack Developer</p>
+
+      <div class="contact-links">
+        <a href="https://wa.me/5511937525029" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp" title="WhatsApp">
+          <i class="bi bi-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a href="mailto:brian.livramento@hotmail.com" aria-label="Enviar e-mail" title="E-mail">
+          <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/brianlivramento/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn" title="LinkedIn">
+          <i class="bi bi-linkedin" aria-hidden="true"></i>
+        </a>
+        <a href="https://github.com/brlivramento" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub" title="GitHub">
+          <i class="bi bi-github" aria-hidden="true"></i>
+        </a>
+      </div>
+
+      <a class="resume-link" href="docs/cv_brianlivramento.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
+        <span class="resume-desktop">Meu currículo</span>
+        <span class="resume-mobile">Meu CV</span>
+      </a>
+
+    </aside>
+
+    <div class="portfolio-lightbox" id="portfolio-lightbox" aria-hidden="true">
+      <button class="portfolio-lightbox-close" type="button" aria-label="Fechar imagem">
+        <i class="bi bi-x-lg"></i>
+      </button>
+      <img id="portfolio-lightbox-image" src="" alt="">
+    </div>
+
+  </main>
+  <footer>© 2026 Brian Livramento</footer>
+  <script src="js/stacks.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
