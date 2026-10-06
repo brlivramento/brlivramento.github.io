@@ -80,6 +80,11 @@ h1{max-width:740px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;
 .tech-composer{background:#6c5c4f}
 .tech-npm{background:#cb3837}
 .tech-vscode{background:#007acc}
+.tech-python{background:#3776ab}
+.tech-fastapi{background:#009688}
+.tech-django{background:#092e20}
+.tech-nextjs{background:#000}
+.tech-rabbitmq{background:#ff6600}
 .profile{position:sticky;top:96px}
 .avatar{--avatar-zoom:1.08;--avatar-x:50%;--avatar-y:38%;width:70%;aspect-ratio:1;overflow:hidden;border:1px solid var(--line);border-radius:50%;background:var(--soft);box-shadow:var(--shadow)}
 .avatar img{width:100%;height:100%;display:block;object-fit:cover;object-position:var(--avatar-x) var(--avatar-y);transform:scale(var(--avatar-zoom));transform-origin:var(--avatar-x) var(--avatar-y)}

@@ -3,19 +3,34 @@ const stacks = [
     group: "backend",
     technologies: [
       {
+        name: "PHP",
+        slug: "php",
+        icon: "devicon-php-plain"
+      },
+      {
+        name: "Python",
+        slug: "python",
+        icon: "devicon-python-plain"
+      },
+      {
         name: "Node.js",
         slug: "node",
         icon: "devicon-nodejs-plain"
       },
       {
+        name: "TypeScript",
+        slug: "typescript",
+        icon: "devicon-typescript-plain"
+      },
+      {
+        name: "JavaScript",
+        slug: "javascript",
+        icon: "devicon-javascript-plain"
+      },
+      {
         name: "NestJS",
         slug: "nestjs",
         icon: "devicon-nestjs-plain"
-      },
-      {
-        name: "PHP",
-        slug: "php",
-        icon: "devicon-php-plain"
       },
       {
         name: "Laravel",
@@ -28,19 +43,35 @@ const stacks = [
         icon: "devicon-symfony-original"
       },
       {
+        name: "FastAPI",
+        slug: "fastapi",
+        icon: "devicon-fastapi-plain"
+      },
+      {
+        name: "Django",
+        slug: "django",
+        icon: "devicon-django-plain"
+      },
+      {
         name: "Zend Framework",
         slug: "zend",
         icon: "devicon-zend-plain"
+      }
+    ]
+  },
+
+  {
+    group: "platform",
+    technologies: [
+      {
+        name: "Next.js",
+        slug: "nextjs",
+        icon: "devicon-nextjs-plain"
       },
       {
-        name: "JavaScript",
-        slug: "javascript",
-        icon: "devicon-javascript-plain"
-      },
-      {
-        name: "TypeScript",
-        slug: "typescript",
-        icon: "devicon-typescript-plain"
+        name: "Vue.js",
+        slug: "vue",
+        icon: "devicon-vuejs-plain"
       },
       {
         name: "Drupal",
@@ -53,40 +84,9 @@ const stacks = [
         icon: "devicon-moodle-plain"
       },
       {
-        name: "Joomla",
-        slug: "joomla",
-        icon: "devicon-joomla-plain"
-      },
-      {
         name: "WordPress",
         slug: "wordpress",
         icon: "devicon-wordpress-plain"
-      }
-    ]
-  },
-
-  {
-    group: "frontend",
-    technologies: [
-      {
-        name: "React.js",
-        slug: "react",
-        icon: "devicon-react-original"
-      },
-      {
-        name: "Vue.js",
-        slug: "vue",
-        icon: "devicon-vuejs-plain"
-      },
-      {
-        name: "Angular",
-        slug: "angular",
-        icon: "devicon-angular-plain"
-      },
-      {
-        name: "Bootstrap",
-        slug: "bootstrap",
-        icon: "devicon-bootstrap-plain"
       }
     ]
   },
@@ -105,11 +105,6 @@ const stacks = [
         icon: "devicon-postgresql-plain"
       },
       {
-        name: "MariaDB",
-        slug: "mariadb",
-        icon: "devicon-mariadb-original"
-      },
-      {
         name: "MongoDB",
         slug: "mongodb",
         icon: "devicon-mongodb-plain"
@@ -118,11 +113,6 @@ const stacks = [
         name: "Redis",
         slug: "redis",
         icon: "devicon-redis-plain"
-      },
-      {
-        name: "SQLite",
-        slug: "sqlite",
-        icon: "devicon-sqlite-plain"
       }
     ]
   },
@@ -141,9 +131,19 @@ const stacks = [
         icon: "devicon-prisma-original"
       },
       {
+        name: "RabbitMQ",
+        slug: "rabbitmq",
+        icon: "devicon-rabbitmq-original"
+      },
+      {
         name: "Kafka",
         slug: "kafka",
         icon: "devicon-apachekafka-original"
+      },
+      {
+        name: "PHPUnit",
+        slug: "phpunit",
+        icon: "devicon-phpunit-plain"
       },
       {
         name: "Jest",
