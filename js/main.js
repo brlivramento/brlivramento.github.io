@@ -1,3 +1,11 @@
+function trackEvent(eventName, params = {}) {
+  if (typeof gtag !== "function") {
+    return;
+  }
+
+  gtag("event", eventName, params);
+}
+
 const themeToggle = document.getElementById("theme-toggle");
 
 function updateThemeButton(theme) {
@@ -60,6 +68,7 @@ function renderPortfolio() {
               src="${image}"
               alt=""
               loading="lazy"
+              data-project="${item.title}"
               style="--i: ${index}"
             >
           `
@@ -176,19 +185,13 @@ function openTab(target) {
 
 
 tabs.forEach((tab) => {
+  tab.addEventListener("click", function () {
+    const target = tab.dataset.tab;
 
-  tab.addEventListener(
-    "click",
-    function () {
+    openTab(target);
 
-      const target =
-        tab.dataset.tab;
-
-      openTab(target);
-
-    }
-  );
-
+    trackEvent(`tab_${target}`);
+  });
 });
 
 function openTabFromHash() {
@@ -232,6 +235,11 @@ function openLightbox(image) {
   lightbox.setAttribute("aria-hidden", "false");
 
   document.body.style.overflow = "hidden";
+
+  trackEvent("portfolio_image_open", {
+    project_name: image.dataset.project,
+    image_url: image.src
+  });
 }
 
 
@@ -312,5 +320,11 @@ function renderStacks() {
     })
     .join("");
 }
+
+document.querySelectorAll("[data-analytics]").forEach((element) => {
+  element.addEventListener("click", () => {
+    trackEvent(element.dataset.analytics);
+  });
+});
 
 renderStacks();

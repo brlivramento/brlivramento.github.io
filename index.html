@@ -17,6 +17,16 @@
 
   <title>Brian Livramento — Full Stack Developer Freelancer</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNHEFS40NV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-LNHEFS40NV');
+  </script>
+
   <script>
     (function () {
       const savedTheme = localStorage.getItem("theme");
@@ -86,7 +96,7 @@
             <p class="portfolio-intro__details">
               Para detalhes sobre clientes e projetos, consulte meu
               <a href="https://www.linkedin.com/in/brianlivramento/"
-                target="_blank"
+                target="_blank" data-analytics="linkedin_click"
                 rel="noopener noreferrer">LinkedIn</a>.<br>
               Sobre arquiteturas, desafios e soluções técnicas, entre em contato.
             </p>
@@ -106,21 +116,21 @@
       <p class="username">Full Stack Developer</p>
 
       <div class="contact-links">
-        <a href="https://wa.me/5511937525029" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp" title="WhatsApp">
+        <a href="https://wa.me/5511937525029" target="_blank" data-analytics="whatsapp_click" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp" title="WhatsApp">
           <i class="bi bi-whatsapp" aria-hidden="true"></i>
         </a>
-        <a href="mailto:brian.livramento@hotmail.com" aria-label="Enviar e-mail" title="E-mail">
+        <a href="mailto:brian.livramento@hotmail.com"  data-analytics="email_click" aria-label="Enviar e-mail" title="E-mail">
           <i class="bi bi-envelope-fill" aria-hidden="true"></i>
         </a>
-        <a href="https://www.linkedin.com/in/brianlivramento/" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn" title="LinkedIn">
+        <a href="https://www.linkedin.com/in/brianlivramento/" data-analytics="linkedin_click" target="_blank" rel="noopener noreferrer" aria-label="Abrir LinkedIn" title="LinkedIn">
           <i class="bi bi-linkedin" aria-hidden="true"></i>
         </a>
-        <a href="https://github.com/brlivramento" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub" title="GitHub">
+        <a href="https://github.com/brlivramento" data-analytics="github_click" target="_blank" rel="noopener noreferrer" aria-label="Abrir GitHub" title="GitHub">
           <i class="bi bi-github" aria-hidden="true"></i>
         </a>
       </div>
 
-      <a class="resume-link" href="docs/cv_brianlivramento.pdf" target="_blank" rel="noopener noreferrer">
+      <a class="resume-link" href="docs/cv_brianlivramento.pdf" target="_blank" rel="noopener noreferrer" data-analytics="cv_click">
         <i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i>
         <span class="resume-desktop">Meu currículo</span>
         <span class="resume-mobile">Meu CV</span>
