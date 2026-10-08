@@ -186,5 +186,65 @@ const stacks = [
         icon: "devicon-googlecloud-plain"
       }
     ]
+  },
+  {
+    group: "legacy",
+    technologies: [
+      {
+        name: "Node.js",
+        slug: "nodejs",
+        icon: "devicon-nodejs-plain"
+      },
+      {
+        name: "Zend Framework",
+        slug: "zend-framework",
+        icon: "devicon-zend-plain"
+      },
+      {
+        name: "CodeIgniter",
+        slug: "code-igniter",
+        icon: "devicon-codeigniter-plain"
+      },
+      {
+        name: "AWS EC2",
+        slug: "aws-ec2",
+        icon: "devicon-amazonwebservices-plain-wordmark"
+      },
+      {
+        name: "Microsoft Azure",
+        slug: "microsoft-azure",
+        icon: "devicon-azure-plain"
+      },
+      {
+        name: "Adobe Flex",
+        slug: "adobe-flex",
+        icon: ""
+      },
+      {
+        name: "ActionScript",
+        slug: "actionscript",
+        icon: ""
+      },
+      {
+        name: "SQL Server",
+        slug: "sql-server",
+        icon: "devicon-microsoftsqlserver-plain"
+      },
+      {
+        name: "Nginx",
+        slug: "nginx",
+        icon: "devicon-nginx-original"
+      },
+      {
+        name: "Joomla",
+        slug: "joomla",
+        icon: "devicon-joomla-plain"
+      },
+      {
+        name: "Magento",
+        slug: "magento",
+        icon: "devicon-magento-original"
+      }
+    ]
   }
 ];

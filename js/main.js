@@ -6,27 +6,31 @@ function trackEvent(eventName, params = {}) {
   gtag("event", eventName, params);
 }
 
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;",
+  })[char]);
+}
+
 const themeToggle = document.getElementById("theme-toggle");
 
 function updateThemeButton(theme) {
   const nextTheme = theme === "dark" ? "claro" : "escuro";
 
-  themeToggle.setAttribute(
-    "aria-label",
-    `Ativar modo ${nextTheme}`
-  );
+  themeToggle.setAttribute("aria-label", `Ativar modo ${nextTheme}`);
 }
 
 updateThemeButton(document.documentElement.dataset.theme);
 
 themeToggle.addEventListener("click", function () {
   const currentTheme = document.documentElement.dataset.theme;
-
-  const newTheme =
-    currentTheme === "dark" ? "light" : "dark";
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
 
   document.documentElement.dataset.theme = newTheme;
-
   localStorage.setItem("theme", newTheme);
 
   updateThemeButton(newTheme);
@@ -40,14 +44,11 @@ function renderPortfolio() {
   }
 
   const sortedProjects = [...projects].sort(
-    (a, b) =>
-      b.endYear - a.endYear ||
-      b.startYear - a.startYear
+    (a, b) => b.endYear - a.endYear || b.startYear - a.startYear
   );
 
   timeline.innerHTML = sortedProjects
     .map((item) => {
-
       const period =
         item.startYear === item.endYear
           ? item.startYear
@@ -56,9 +57,35 @@ function renderPortfolio() {
       const projectList = (item.projects || [])
         .map(
           (project) => `
-            <li>${project}</li>
+            <li>${escapeHtml(project)}</li>
           `
         )
+        .join("");
+
+      const highlights = (item.highlights || [])
+        .map(
+          (tag) => `
+            <span class="portfolio-highlight">
+              #${escapeHtml(tag)}
+            </span>
+          `
+        )
+        .join("");
+
+      const technologies = (item.technologies || [])
+        .map((slug) => {
+          const tech = stacks
+            .flatMap((group) => group.technologies)
+            .find((tech) => tech.slug === slug);
+
+          if (!tech) return "";
+
+          return `
+            <span class="tech tech-mini tech-${escapeHtml(tech.slug)}">
+              ${escapeHtml(tech.name)}
+            </span>
+          `;
+        })
         .join("");
 
       const images = (item.images || [])
@@ -77,7 +104,6 @@ function renderPortfolio() {
 
       return `
         <article class="portfolio-item">
-
           <div class="portfolio-year">
             ${period}
           </div>
@@ -85,7 +111,6 @@ function renderPortfolio() {
           <div class="portfolio-dot"></div>
 
           <div class="portfolio-info">
-
             <h3>
               ${item.title}
             </h3>
@@ -97,10 +122,7 @@ function renderPortfolio() {
             ${
               images
                 ? `
-                  <div
-                    class="portfolio-images"
-                    aria-hidden="true"
-                  >
+                  <div class="portfolio-images" aria-hidden="true">
                     ${images}
                   </div>
                 `
@@ -117,8 +139,26 @@ function renderPortfolio() {
                 : ""
             }
 
-          </div>
+            ${
+              technologies
+                ? `
+                  <div class="portfolio-technologies">
+                    ${technologies}
+                  </div>
+                `
+                : ""
+            }
 
+            ${
+              highlights
+                ? `
+                  <div class="portfolio-highlights">
+                    ${highlights}
+                  </div>
+                `
+                : ""
+            }
+          </div>
         </article>
       `;
     })
@@ -126,8 +166,7 @@ function renderPortfolio() {
 }
 
 function animatePortfolio() {
-  const items =
-    document.querySelectorAll(".portfolio-item");
+  const items = document.querySelectorAll(".portfolio-item");
 
   items.forEach((item, index) => {
     item.classList.remove("visible");
@@ -140,42 +179,21 @@ function animatePortfolio() {
 
 renderPortfolio();
 
-const tabs =
-  document.querySelectorAll(".tab");
-
-const tabContents =
-  document.querySelectorAll(".tab-content");
-
+const tabs = document.querySelectorAll(".tab");
+const tabContents = document.querySelectorAll(".tab-content");
 
 function openTab(target) {
-
   tabs.forEach((tab) => {
+    const isActive = tab.dataset.tab === target;
 
-    const isActive =
-      tab.dataset.tab === target;
-
-    tab.classList.toggle(
-      "active",
-      isActive
-    );
-
-    tab.setAttribute(
-      "aria-selected",
-      isActive ? "true" : "false"
-    );
-
+    tab.classList.toggle("active", isActive);
+    tab.setAttribute("aria-selected", isActive ? "true" : "false");
   });
 
   tabContents.forEach((content) => {
+    const isActive = content.id === target;
 
-    const isActive =
-      content.id === target;
-
-    content.classList.toggle(
-      "active",
-      isActive
-    );
-
+    content.classList.toggle("active", isActive);
   });
 
   if (target === "portfolio") {
@@ -183,49 +201,32 @@ function openTab(target) {
   }
 }
 
-
 tabs.forEach((tab) => {
   tab.addEventListener("click", function () {
     const target = tab.dataset.tab;
 
     openTab(target);
-
     trackEvent(`tab_${target}`);
   });
 });
 
 function openTabFromHash() {
+  const target = window.location.hash.substring(1);
 
-  const target =
-    window.location.hash.substring(1);
-
-  if (
-    target === "portfolio" ||
-    target === "stacks"
-  ) {
+  if (target === "portfolio" || target === "stacks") {
     openTab(target);
     return;
   }
+
   openTab("stacks");
 }
 
 openTabFromHash();
+window.addEventListener("hashchange", openTabFromHash);
 
-window.addEventListener(
-  "hashchange",
-  openTabFromHash
-);
-
-
-const lightbox =
-  document.getElementById("portfolio-lightbox");
-
-const lightboxImage =
-  document.getElementById("portfolio-lightbox-image");
-
-const lightboxClose =
-  document.querySelector(".portfolio-lightbox-close");
-
+const lightbox = document.getElementById("portfolio-lightbox");
+const lightboxImage = document.getElementById("portfolio-lightbox-image");
+const lightboxClose = document.querySelector(".portfolio-lightbox-close");
 
 function openLightbox(image) {
   lightboxImage.src = image.src;
@@ -238,10 +239,9 @@ function openLightbox(image) {
 
   trackEvent("portfolio_image_open", {
     project_name: image.dataset.project,
-    image_url: image.src
+    image_url: image.src,
   });
 }
-
 
 function closeLightbox() {
   lightbox.classList.remove("active");
@@ -255,9 +255,7 @@ function closeLightbox() {
 }
 
 document.addEventListener("click", function (event) {
-  const image = event.target.closest(
-    ".portfolio-images img"
-  );
+  const image = event.target.closest(".portfolio-images img");
 
   if (!image) {
     return;
@@ -277,10 +275,7 @@ lightbox.addEventListener("click", function (event) {
 });
 
 document.addEventListener("keydown", function (event) {
-  if (
-    event.key === "Escape" &&
-    lightbox.classList.contains("active")
-  ) {
+  if (event.key === "Escape" && lightbox.classList.contains("active")) {
     closeLightbox();
   }
 });
@@ -293,16 +288,13 @@ function renderStacks() {
   }
 
   container.innerHTML = stacks
+    .filter((group) => group.group !== "legacy")
     .map((group) => {
       const technologies = group.technologies
         .map(
           (tech) => `
             <span class="tech tech-${tech.slug}">
-              <i
-                class="${tech.icon}"
-                aria-hidden="true"
-              ></i>
-
+              <i class="${tech.icon}" aria-hidden="true"></i>
               <span>${tech.name}</span>
             </span>
           `
@@ -310,10 +302,7 @@ function renderStacks() {
         .join("");
 
       return `
-        <div
-          class="tech-group"
-          data-group="${group.group}"
-        >
+        <div class="tech-group" data-group="${group.group}">
           ${technologies}
         </div>
       `;

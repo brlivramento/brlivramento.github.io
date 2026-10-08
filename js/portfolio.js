@@ -1,20 +1,94 @@
+
 const projects = [
-  {
-    startYear: 2019,
+ {
+    startYear: 2025,
     endYear: 2026,
-    title: "Plataformas e integrações digitais",
+    title: "Gamificação e evolução de plataformas",
     description:
-      "Mercado brasileiro e internacional. Segmentos: educação, saúde, nutrição e pets.",
+      "Evolução de plataformas digitais para os segmentos de educação, saúde, nutrição e pets.",
+    projects: [
+      "Gamificação e programas de engajamento",
+      "Upgrades e modernização de plataformas",
+      "APIs para controle de estoque",
+      "Integrações com serviços externos",
+      "Pipelines de integração e implantação"
+    ],
+    technologies: [
+      "php",
+      "drupal",
+      "nodejs",
+      "typescript",
+      "nestjs",
+      "rabbitmq",
+      "docker",
+      "jenkins"
+    ],
+    highlights: [
+      "SOLID",
+      "REST",      
+      "DesignPatterns",
+      "CI/CD",
+      "GitFlow"
+    ]
+  },
+
+  {
+    startYear: 2022,
+    endYear: 2024,
+    title: "Expansão de plataformas e integrações",
+    description:
+      "Desenvolvimento e sustentação de soluções digitais para mercados nacionais e internacionais.",
     projects: [
       "Campanhas e experiências digitais",
-      "Tracking e gamificação",
-      "Migrações de banco de dados",
-      "Upgrades plataforma",
       "APIs para autenticação e CADUs (Cadastro Único)",
       "APIs para controle de estoque",
       "Chatbot para WhatsApp via API",
-      "Provisionamento de ambientes",
-      "Pipelines de integração e implantação"
+      "Migrações de banco de dados",
+      "Provisionamento de ambientes"
+    ],
+    technologies: [
+      "php",
+      "drupal",
+      "nodejs",
+      "docker",
+      "swagger",
+      "jenkins"
+    ],
+    highlights: [
+      "OOP",
+      "REST",
+      "APIs",
+      "CI/CD",
+      "GitFlow"
+    ]
+  },
+
+  {
+    startYear: 2020,
+    endYear: 2021,
+    title: "Plataformas digitais e integrações",
+    description:
+      "Desenvolvimento de soluções web e integrações para plataformas digitais no Brasil e no exterior.",
+    projects: [
+      "Campanhas e experiências digitais",
+      "Tracking e integrações",
+      "APIs para autenticação",
+      "Evolução de plataformas",
+      "Provisionamento de ambientes"
+    ],
+    technologies: [
+      "php",
+      "drupal",
+      "nodejs",
+      "vue",
+      "docker"
+    ],
+    highlights: [
+      "OOP",
+      "MVC",
+      "REST",
+      "Git",
+      "Scrum"
     ]
   },
 
@@ -27,6 +101,21 @@ const projects = [
     projects: [
       "Otimização consultas a banco de dados",
       "Testes automatizados"
+    ],
+    technologies: [
+      "php",
+      "laravel",
+      "mysql",
+      "kafka",
+      "phpunit",
+      "docker"
+    ],
+    highlights: [
+      "OOP",
+      "SQL",
+      "UnitTesting",
+      "Refactoring",
+      "Git"
     ]
   },
 
@@ -47,7 +136,26 @@ const projects = [
       "Sistema de gestão municipal",
       "Plataforma de gestão comercial",
       "Plataforma de gestão de capacitações",
-      "Provisionamento de ambientes",
+      "Provisionamento de ambientes"
+    ],
+    technologies: [
+      "python",
+      "django",
+      "php",
+      "symfony",
+      "laravel",
+      "postman",
+      "docker",
+      "mysql"
+    ],
+    highlights: [
+      "OOP",
+      "MVC",
+      "DesignPatterns",
+      "REST",
+      "APIs",
+      "Linux",
+      "Git"
     ]
   },
 
@@ -65,6 +173,22 @@ const projects = [
     projects: [
       "Sistema de gestão pública",
       "Modernização de sistema legado"
+    ],
+    technologies: [
+      "php",
+      "symfony",
+      "doctrine",
+      "postgresql",
+      "docker"
+    ],
+    highlights: [
+      "OOP",
+      "MVC",
+      "DesignPatterns",
+      "ORM",
+      "Scrum",
+      "Refactoring",
+      "Git"
     ]
   },
 
@@ -80,6 +204,22 @@ const projects = [
       "Migrações de banco de dados",
       "Conteinerização de aplicações",
       "Orquestração de containers"
+    ],
+    technologies: [
+      "python",
+      "django",
+      "php",
+      "laravel",
+      "postgresql",
+      "aws-ec2"
+    ],
+    highlights: [
+      "OOP",
+      "REST",
+      "MVC",
+      "DesignPatterns",
+      "Containers",
+      "AWS-ECS"
     ]
   },
 
@@ -103,6 +243,23 @@ const projects = [
       "Relatórios e indicadores",
       "Integração com Moodle",
       "Administração de ambientes cloud"
+    ],
+    technologies: [
+      "php",
+      "laravel",
+      "moodle",
+      "mongodb",
+      "redis",
+      "microsoft-azure"
+    ],
+    highlights: [
+      "OOP",
+      "MVC",
+      "DesignPatterns",
+      "DataModeling",
+      "Linux",
+      "Git",
+      "TFS"
     ]
   },
 
@@ -117,6 +274,16 @@ const projects = [
     ],
     projects: [
       "Aplicativo híbrido para vendas diretas"
+    ],
+    technologies: [
+      "adobe-flex",
+      "actionscript",
+      "postgresql"
+    ],
+    highlights: [
+      "Mobile",
+      "HybridApp",
+      "SVN"
     ]
   },
 
@@ -131,6 +298,21 @@ const projects = [
       "E-commerces",
       "Migração de e-commerces",
       "Sites institucionais"
+    ],
+    technologies: [
+      "php",
+      "code-igniter",
+      "zend-framework",
+      "nginx",
+      "joomla",
+      "wordpress",
+      "magento",
+    ],
+    highlights: [
+      "OOP",
+      "MVC",
+      "SVN",
+      "SEO"
     ]
   },
 
@@ -143,6 +325,15 @@ const projects = [
     projects: [
       "Consultas a banco de dados",
       "Relatórios corporativos"
+    ],
+    technologies: [
+      "sql-server",
+    ],
+    highlights: [
+      "SQL",
+      "Joins",
+      "Reporting",
+      "CrystalReports"
     ]
   }
 ];

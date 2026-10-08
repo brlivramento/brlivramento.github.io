@@ -41,6 +41,16 @@ h1{max-width:740px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;
 .tech i{color:inherit;font-size:17px!important;line-height:1}
 .tech span{color:inherit;font:inherit;line-height:1}
 .tech-php{background:#777bb4}.tech-node{background:#339933}.tech-laravel{background:#ff2d20}.tech-nestjs{background:#e0234e}.tech-symfony{background:#202020}.tech-zend{background:#68b604}.tech-cakephp{background:#d33c43}.tech-drupal{background:#0678be}.tech-moodle{background:#f98012}.tech-joomla{background:#5091cd}.tech-wordpress{background:#21759b}.tech-javascript{background:#f7df1e;color:#171717}.tech-typescript{background:#3178c6}.tech-react{background:#20232a;color:#61dafb}.tech-vue{background:#42b883}.tech-angular{background:#dd0031}.tech-bootstrap{background:#7952b3}.tech-sass{background:#cc6699}.tech-mysql{background:#00758f}.tech-postgresql{background:#336791}.tech-mariadb{background:#003545}.tech-mongodb{background:#47a248}.tech-redis{background:#dc382d}.tech-sqlite{background:#003b57}.tech-doctrine{background:#fc6a31}.tech-prisma{background:#2d3748}.tech-sonata{background:#1f6fb2}.tech-kafka{background:#231f20}.tech-phpunit{background:#6c5c93}.tech-jest{background:#c21325}.tech-docker{background:#2496ed}.tech-kubernetes{background:#326ce5}.tech-jenkins{background:#d33833}.tech-cicd{background:#0f766e}.tech-aws{background:#232f3e;color:#ff9900}.tech-azure{background:#0078d4}.tech-googlecloud{background:#4285f4}.tech-linux{background:#fbc02d;color:#171717}.tech-apache{background:#d22128}.tech-nginx{background:#009639}.tech-rest{background:#0f766e}.tech-restful{background:#0369a1}.tech-swagger{background:#85ea2d;color:#173300}.tech-solid{background:#7c3aed}.tech-git{background:#f05032}.tech-composer{background:#6c5c4f}.tech-npm{background:#cb3837}.tech-vscode{background:#007acc}.tech-python{background:#3776ab}.tech-fastapi{background:#009688}.tech-django{background:#092e20}.tech-nextjs{background:#000}.tech-rabbitmq{background:#ff6600}
+.tech-nodejs{background:#339933}
+.tech-zend-framework{background:#68b604}
+.tech-code-igniter{background:#ee4623}
+.tech-aws-ec2{background:#232f3e;color:#ff9900}
+.tech-microsoft-azure{background:#0078d4}
+.tech-adobe-flex{background:#e44d26}
+.tech-actionscript{background:#cf302a}
+.tech-sql-server{background:#5c6773;color:#fff}
+.tech-magento{background:#5c6773;color:#fff}
+.tech-magento{background:#ef5b25;color:#fff}
 
 /* Profile */
 .profile{position:sticky;top:96px}
@@ -90,7 +100,7 @@ h1{max-width:740px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);line-height:1.02;
 .portfolio-technologies{display:flex;flex-wrap:wrap;gap:3px;margin-top:5px}
 .portfolio-technologies .tech-mini{display:inline-flex;align-items:center;justify-content:center;width:auto;min-width:0;height:17px;min-height:0;margin:0;padding:2px 5px;border:0;border-radius:2px;font-size:8px;font-weight:700;line-height:1;box-shadow:none}
 .portfolio-highlights{display:flex;flex-wrap:wrap;gap:4px 8px;margin:5px 0 18px}
-.portfolio-highlight{color:var(--blue);font-size:10px;font-weight:500;line-height:1.3}
+.portfolio-highlight{color:var(--blue);font-size:11px;font-weight:500;line-height:1.3}
 
 /* Footer */
 footer{padding:24px 20px;border-top:1px solid var(--line);color:var(--muted);text-align:center;font-size:12px}
