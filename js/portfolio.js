@@ -1,7 +1,7 @@
 
 const projects = [
  {
-    startYear: 2025,
+    startYear: 2024,
     endYear: 2026,
     title: "Gamificação e evolução de plataformas",
     description:
@@ -16,10 +16,11 @@ const projects = [
     technologies: [
       "php",
       "drupal",
-      "nodejs",
+      "node",
       "typescript",
       "nestjs",
       "rabbitmq",
+      "swagger",      
       "docker",
       "jenkins"
     ],
@@ -27,6 +28,8 @@ const projects = [
       "SOLID",
       "REST",      
       "DesignPatterns",
+      "Pipeline",
+      "Pantheon",
       "CI/CD",
       "GitFlow"
     ]
@@ -34,7 +37,7 @@ const projects = [
 
   {
     startYear: 2022,
-    endYear: 2024,
+    endYear: 2023,
     title: "Expansão de plataformas e integrações",
     description:
       "Desenvolvimento e sustentação de soluções digitais para mercados nacionais e internacionais.",
@@ -49,7 +52,7 @@ const projects = [
     technologies: [
       "php",
       "drupal",
-      "nodejs",
+      "node",
       "docker",
       "swagger",
       "jenkins"
@@ -58,6 +61,8 @@ const projects = [
       "OOP",
       "REST",
       "APIs",
+      "Pipeline",
+      "Pantheon",      
       "CI/CD",
       "GitFlow"
     ]
@@ -79,13 +84,15 @@ const projects = [
     technologies: [
       "php",
       "drupal",
-      "nodejs",
+      "node",
       "vue",
       "docker"
     ],
     highlights: [
       "OOP",
       "MVC",
+      "SOAP",
+      "SEO On-Page",
       "REST",
       "Git",
       "Scrum"
@@ -211,7 +218,7 @@ const projects = [
       "php",
       "laravel",
       "postgresql",
-      "aws-ec2"
+      "aws"
     ],
     highlights: [
       "OOP",
@@ -250,7 +257,7 @@ const projects = [
       "moodle",
       "mongodb",
       "redis",
-      "microsoft-azure"
+      "azure"
     ],
     highlights: [
       "OOP",
@@ -302,7 +309,7 @@ const projects = [
     technologies: [
       "php",
       "code-igniter",
-      "zend-framework",
+      "zend",
       "nginx",
       "joomla",
       "wordpress",

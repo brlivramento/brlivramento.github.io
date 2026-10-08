@@ -191,29 +191,9 @@ const stacks = [
     group: "legacy",
     technologies: [
       {
-        name: "Node.js",
-        slug: "nodejs",
-        icon: "devicon-nodejs-plain"
-      },
-      {
-        name: "Zend Framework",
-        slug: "zend-framework",
-        icon: "devicon-zend-plain"
-      },
-      {
         name: "CodeIgniter",
         slug: "code-igniter",
         icon: "devicon-codeigniter-plain"
-      },
-      {
-        name: "AWS EC2",
-        slug: "aws-ec2",
-        icon: "devicon-amazonwebservices-plain-wordmark"
-      },
-      {
-        name: "Microsoft Azure",
-        slug: "microsoft-azure",
-        icon: "devicon-azure-plain"
       },
       {
         name: "Adobe Flex",
@@ -244,6 +224,11 @@ const stacks = [
         name: "Magento",
         slug: "magento",
         icon: "devicon-magento-original"
+      },
+      {
+        name: "Postman",
+        slug: "postman",
+        icon: "devicon-postman-plain"
       }
     ]
   }
