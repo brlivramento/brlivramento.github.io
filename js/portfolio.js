@@ -43,7 +43,7 @@ const projects = [
       "Desenvolvimento e sustentação de soluções digitais para mercados nacionais e internacionais.",
     projects: [
       "Campanhas e experiências digitais",
-      "APIs para autenticação e CADUs (Cadastro Único)",
+      "APIs para autenticação e CADU",
       "APIs para controle de estoque",
       "Chatbot para WhatsApp via API",
       "Migrações de banco de dados",
@@ -300,6 +300,10 @@ const projects = [
     title: "Marketing e e-commerce",
     description:
       "Soluções web para marketing, vendas e comércio eletrônico.",
+    images: [
+      "img/portfolio/p-9.jpg",
+      "img/portfolio/p-10.jpg"
+    ],      
     projects: [
       "Dashboards para Marketing Multinível",
       "E-commerces",
