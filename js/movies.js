@@ -2,7 +2,7 @@
  * Se você está lendo isso, provavelmente ficou curioso.
  * Esses títulos vieram das minhas listas pessoais no Letterboxd.
  *
- * Quer explorar mais? https://letterboxd.com/destrytombrlivr/list/
+ * Quer explorar mais? https://letterboxd.com/destrytombrlivr/lists
  */
 
 const movies = [
@@ -181,8 +181,14 @@ const movies = [
   { title: "Gran Torino (2008)", genre: "Existencial e reflexivo" },
   { title: "Lost in Translation (2003)", genre: "Existencial e reflexivo" },
   { title: "Hero (1992)", genre: "Existencial e reflexivo" },
-  { title: "São Paulo, Incorporated (1965)", genre: "Existencial e reflexivo" },
+  { title: "São Paulo Sociedade Anônima (1965)", genre: "Existencial e reflexivo" },
   { title: "Deconstructing Harry (1997)", genre: "Existencial e reflexivo" },
+  { title: "The 400 Blows (1959)", genre: "Existencial e reflexivo" },
+  { title: "Papillon (1973)", genre: "Existencial e reflexivo" },
+  { title: "Inherit the Wind (1960)", genre: "Existencial e reflexivo" },
+  { title: "Lawrence of Arabia (1962)", genre: "Existencial e reflexivo" },
+  { title: "Birdman or (The Unexpected Virtue of Ignorance) (2014)", genre: "Existencial e reflexivo" },
+  { title: "Solaris (1972)", genre: "Existencial e reflexivo" },
 
   // Thriller psicológico
   { title: "The Night of the Hunter (1955)", genre: "Thriller psicológico" },
