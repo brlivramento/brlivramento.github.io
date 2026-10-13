@@ -138,6 +138,26 @@
 
     </aside>
 
+    <div class="movie-widget">
+      <div class="movie-widget__heading">
+        <i class="bi bi-film" aria-hidden="true"></i>
+        <span>Aceita uma indicação de filme?</span>
+      </div>
+      <p>Uma sugestão de algo que eu já assisti e te garanto a qualidade.</p>
+
+      <label for="movie-genre">Gênero</label>
+      <select id="movie-genre"></select>
+
+      <div class="movie-widget__result" aria-live="polite">
+        <span id="movie-title"></span>
+      </div>
+
+      <button id="movie-retry" type="button">
+        <i class="bi bi-arrow-repeat" aria-hidden="true"></i>
+        Tentar de novo
+      </button>
+    </div>
+
     <div class="portfolio-lightbox" id="portfolio-lightbox" aria-hidden="true">
       <button class="portfolio-lightbox-close" type="button" aria-label="Fechar imagem">
         <i class="bi bi-x-lg"></i>
@@ -150,5 +170,6 @@
   <script src="js/stacks.js"></script>
   <script src="js/portfolio.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/movies.js"></script>
 </body>
 </html>
